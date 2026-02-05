@@ -1,0 +1,16 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: digital-library-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      # Website UI
+      - ./web:/usr/share/nginx/html:ro
+
+      # 🔥 Digital content (FIXED)
+      - C:/website1/digital-content:/content:ro
+
+      # Nginx config
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+   

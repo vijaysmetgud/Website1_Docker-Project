@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("/assets/linux.jpg") no-repeat center center;
+    background-size: center;
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+}
+.preview {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* ANIMATIONS */
+.fade {
+    animation: fade 2s ease-in-out;
+}
+
+.slide {
+    animation: slide 2s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* CART BAR */
+.cart {
+    background: black;
+    color: white;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 18px;
+}
+
+/* PRODUCTS */
+.products {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    width: 250px;
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* BUTTON */
+.card button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card button:hover {
+    background: #e65c00;
+}
